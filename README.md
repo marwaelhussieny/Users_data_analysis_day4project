@@ -1,5 +1,5 @@
 # Users_data_analysis_day4project
-# 👥 Users Data Analysis
+# Users Data Analysis
 
 A Python data analysis project for ITI Data analysis final course that fetches real user data from a public API, explores it with Pandas, and visualizes key insights using Seaborn .
 
