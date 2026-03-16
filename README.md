@@ -72,27 +72,13 @@ python analysis.py
 
 ## 📊 Visualizations
 
-### Plot 1 — Age Distribution
-![Age Distribution](plots/plot 1.png)
-
-### Plot 2 — Average Age by Gender
-![Avg Age by Gender](plots/plot 2.png)
-
-### Plot 3 — Number of Users per Gender
-![Gender Count](plots/plot 3.png)
-
-### Plot 4 — Top 10 Cities with Most Users
-![Top 10 Cities](plots/plot 4.png)
-
-### Plot 5 — Age vs Height
-![Age vs Height](plots/plot 5.png)
-
-### Plot 6 — Age vs Weight
-![Age vs Weight](plots/plot 6.png)
-
-### Plot 7 — Correlation Heatmap
-![Correlation Heatmap](plots/plot 7.png)
-
+![Age Distribution](plots/plot1.png)
+![Avg Age by Gender](plots/plot2.png)
+![Gender Count](plots/plot3.png)
+![Top 10 Cities](plots/plot4.png)
+![Age vs Height](plots/plot5.png)
+![Age vs Weight](plots/plot6.png)
+![Correlation Heatmap](plots/plot7.png)
 ---
 
 ## 🛠️ Technologies Used
