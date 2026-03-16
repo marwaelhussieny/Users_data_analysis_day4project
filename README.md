@@ -1,79 +1,115 @@
-# Users_data_analysis_day4project
-# Users Data Analysis
+# User Demographics EDA
+ An ITI Data analysis course final project.
+ 
+> Exploratory Data Analysis on 100 users fetched from the DummyJSON API — data cleaning, statistical analysis, and 7 Seaborn visualizations.
 
-A Python data analysis project for ITI Data analysis final course that fetches real user data from a public API, explores it with Pandas, and visualizes key insights using Seaborn .
-
-## 📋 Requirements
-
-```
-pandas
-matplotlib
-seaborn
-requests
-```
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
 
 ---
 
-## 📊 What This Project Does
+## 📦 Dataset
 
-### Data Loading
-- Fetches data from the API using `requests` + `pd.json_normalize()`
+**Source:** `https://dummyjson.com/users?limit=100`
 
-### Data Exploration
-- Shape of the DataFrame (rows, columns)
-- List of all column names
-- Data types per column
-- Missing values per column
-- Duplicate row count
-- Summary statistics for numeric columns
-- Value counts for: gender, bloodGroup, eyeColor, role, address.country
-
-### Data Cleaning
-- Extracts `country` from nested `address` column if missing
-- Handles missing values in `age`, `height`, `weight` (fill with mean/median or drop)
-
-### Analysis Questions Answered
-1. What is the average age of users?
-2. Average age by gender?
-3. Number of users per gender?
-4. Top 10 cities with the most users?
-5. Average height and weight overall?
-6. Is there any obvious relationship between age and height/weight?
-
-### Visualizations (Seaborn)
-At least 5 plots including:
-- Distribution of ages
-- Average age by gender
-- User count by gender
-- Top 10 cities by user count
-- Height vs. Weight scatter (colored by gender)
-- Age vs. Height / Age vs. Weight correlation plots
+100 user records with fields: `age`, `gender`, `height`, `weight`, `bloodGroup`, `eyeColor`, `role`, and nested `address`.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-users-data-analysis/
-│
-├── analysis.py        # Main analysis script
-├── requirements.txt   # Project dependencies
-├── README.md          # Project documentation
-└── plots/             # Saved plot images (auto-generated)
+📦 user-demographics-eda/
+├── analysis.ipynb         # Full Jupyter Notebook (main deliverable)
+├── analysis.py            # Same analysis as a plain Python script
+├── requirements.txt       # Dependencies
+├── README.md
+└── plots/
+    ├── plot1_age_distribution.png
+    ├── plot2_avg_age_by_gender.png
+    ├── plot3_gender_count.png
+    ├── plot4_top10_cities.png
+    ├── plot5_age_vs_height.png
+    ├── plot6_age_vs_weight.png
+    └── plot7_correlation_heatmap.png
 ```
 
 ---
 
-## 🛠 Tools Used
+## ⚙️ Setup & Run
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/YOUR_USERNAME/user-demographics-eda.git
+cd user-demographics-eda
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Open the notebook
+jupyter notebook analysis.ipynb
+
+# OR run the script directly
+python analysis.py
+```
+
+---
+
+## 🔍 Analysis Questions & Answers
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Average age of users? | ~38 years |
+| 2 | Average age by gender? | Male ≈ Female (see Plot 2) |
+| 3 | Number of users per gender? | ~50 male / ~50 female (see Plot 3) |
+| 4 | Top 10 cities with most users? | See Plot 4 |
+| 5 | Average height and weight? | ~170 cm / ~70 kg |
+| 6 | Relationship between age and height/weight? | Weak correlation (r ≈ 0) — no obvious pattern |
+
+---
+
+## 📊 Visualizations
+
+### Plot 1 — Age Distribution
+![Age Distribution](plots/plot 1.png)
+
+### Plot 2 — Average Age by Gender
+![Avg Age by Gender](plots/plot 2.png)
+
+### Plot 3 — Number of Users per Gender
+![Gender Count](plots/plot 3.png)
+
+### Plot 4 — Top 10 Cities with Most Users
+![Top 10 Cities](plots/plot 4.png)
+
+### Plot 5 — Age vs Height
+![Age vs Height](plots/plot 5.png)
+
+### Plot 6 — Age vs Weight
+![Age vs Weight](plots/plot 6.png)
+
+### Plot 7 — Correlation Heatmap
+![Correlation Heatmap](plots/plot 7.png)
+
+---
+
+## 🛠️ Technologies Used
 
 | Tool | Purpose |
 |------|---------|
-| Python | Core language |
+| Python 3 | Core language |
 | Pandas | Data loading & manipulation |
 | Seaborn | Statistical visualizations |
 | Matplotlib | Plot rendering |
 | Requests | API data fetching |
+| Jupyter Notebook | Interactive analysis environment |
 
+---
 
-- All plots use Seaborn's `whitegrid` style for consistency
-- Plots are saved to the `/plots` directory automatically
+## 📌 Notes
+
+- All plots use Seaborn's `whitegrid` style with `Set2` palette for consistency
+- Plots are saved automatically to the `/plots` directory when the notebook/script is run
+- Missing values in `age`, `height`, `weight` are filled with column median
